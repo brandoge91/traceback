@@ -1,4 +1,4 @@
-const token = "NzkyMTI4MDE3NzgyMjc2MTQ3.Gbup5A.Dev1fVTRoRREBRXUgw2RBlr1Lo5_moat1dKtI8"
+const token = "NzkyMTI4MDE3NzgyMjc2MTQ3.G9sNvs.e6Q90QXmOqGg5AHDkC3AVKigyFxf5g945Qd2AY"
 const Discord = require('discord.js');
 const { SlashCommandBuilder, Routes } = require('discord.js');
 const { REST } = require('@discordjs/rest');
