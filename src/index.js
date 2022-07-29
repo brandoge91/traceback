@@ -1,5 +1,10 @@
 const token = "NzkyMTI4MDE3NzgyMjc2MTQ3.G9sNvs.e6Q90QXmOqGg5AHDkC3AVKigyFxf5g945Qd2AY"
 const Discord = require('discord.js');
+const express = require('express')
+const app = express()
+app.get('/', (req, res) => {
+res.status(200);
+})
 const { SlashCommandBuilder, Routes } = require('discord.js');
 const { REST } = require('@discordjs/rest');
 const { EmbedBuilder } = require('discord.js');
@@ -29,7 +34,7 @@ client.on('interactionCreate', async (interaction) => {
     const functions = require('./functions');
 	if (!interaction.isChatInputCommand()) return;
     const { commandName } = interaction;
-    if (commandName === 'traceback') {
+    if (!commandName === 'traceback') return
         const id = interaction.options.getString('id');
         const roverUser = await functions.getRoverUser(id);
         const bloxlinkUser = await functions.getBloxlinkUser(id);
@@ -59,6 +64,7 @@ client.on('interactionCreate', async (interaction) => {
         embed.setColor('#0099ff');
         interaction.reply({ embeds: [embed] });
     
-    }
+    
 })
 client.login(token);
+app.listen(1288)
