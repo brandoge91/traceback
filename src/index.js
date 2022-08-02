@@ -1,4 +1,4 @@
-const token = ""
+const token = process.env.token
 const Discord = require('discord.js');
 const express = require('express')
 const app = express()
