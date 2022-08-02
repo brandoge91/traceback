@@ -35,7 +35,7 @@ async function getRoverUser(id) {
 
 async function getBloxlinkUser(id) {
     const url = urls.bloxlink + id;
-    const api_key = '3bab43b9-1638-438c-b641-db0b9275037dbfe69f63-1007-4f49-99ea-b5b3428060449ef0d1a0-2d2b-45dc-868a-74979a537f79'
+    const api_key = ''
 
     const response = await axios.get(url, {
         headers: {
