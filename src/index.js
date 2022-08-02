@@ -1,4 +1,4 @@
-const token = "NzkyMTI4MDE3NzgyMjc2MTQ3.G9sNvs.e6Q90QXmOqGg5AHDkC3AVKigyFxf5g945Qd2AY"
+const token = ""
 const Discord = require('discord.js');
 const express = require('express')
 const app = express()
@@ -26,7 +26,7 @@ const commands = [
 	.map(command => command.toJSON());
 
 const rest = new REST({ version: '10' }).setToken(token);
-rest.put(Routes.applicationCommands('792128017782276147'), { body: commands })
+rest.put(Routes.applicationCommands(''), { body: commands })
 	.then(() => console.log('Successfully registered application commands.'))
 	.catch(console.error);
 
